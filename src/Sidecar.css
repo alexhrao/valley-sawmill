@@ -1,0 +1,26 @@
+.sidecar {
+    position: sticky;
+    top: 50%;
+    width: 25vw;
+    height: fit-content;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: white;
+    color: black;
+    box-shadow: black 0px 0px 20px;
+}
+
+.mobile .sidecar {
+    width: 100%;
+    bottom: 0;
+    border-left: none;
+    border-radius: 0;
+    text-align: center;
+    padding-left: 0;
+}

@@ -1,0 +1,33 @@
+.product-card {
+    width: fit-content;
+    padding: 10px;
+    margin: 10px;
+}
+
+.product-card > .header {
+    font-size: 1.75em;
+    margin: 0;
+}
+
+.product-card > .description {
+    font-size: 1.25em;
+    margin: 0;
+}
+
+.product-thumb img {
+    border-radius: 5px;
+    /* What? */
+    /* box-shadow: inset 5px 5px 5px 5px; */
+    border: none;
+    max-width: 20vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    cursor: pointer;
+}
+
+.mobile .product-thumb img {
+    max-width: 100%;
+    max-height: 65vh;
+
+}

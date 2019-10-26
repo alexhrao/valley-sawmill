@@ -1,5 +1,14 @@
-.App {
-  text-align: center;
+.main-view {
+  display: flex;
+  flex-direction: row;
+  background-color: #000000;
+  color: white;
+  /* border: 8px solid #d38b47; */
+  border-right: none;
+}
+
+.main-view.mobile {
+  flex-direction: column;
 }
 
 .App-logo {
