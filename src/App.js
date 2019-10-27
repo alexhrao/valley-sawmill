@@ -62,7 +62,7 @@ const products = [
   },
   {
     name: "Logs",
-    description: "",
+    description: "We provide wholesale turned log packages for projects like those seen in the gallery below",
     products: [
       {
         imgLink: "logs/01.jpg",
@@ -115,6 +115,9 @@ const products = [
       {
         imgLink: "logs/17.jpg",
       },
+      {
+        imgLink: "logs/18.jpg",
+      }
     ]
   }
 ];
