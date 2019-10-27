@@ -1,13 +1,11 @@
 .main-view {
-  display: flex;
-  flex-direction: row;
   background-color: #000000;
   color: white;
   /* border: 8px solid #d38b47; */
   border-right: none;
 }
 
-.main-view.mobile {
+.mobile .main-view {
   flex-direction: column;
 }
 
@@ -28,4 +26,48 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+.anchor {
+  position: relative;
+}
+
+.anchor a {
+  position: absolute;
+  left: 0;
+  top: -65px;
+  visibility: hidden;
+}
+
+.mobile .anchor a {
+  top: -315px;
+}
+
+.contact h2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  padding: 5px;
+  min-width: 30vw;
+  text-align: center;
+  padding-bottom: 10px;
+  border: 8px solid #5f3610;
+  box-shadow: inset black 0px 0px 10px;
+  background-color: #1b311ab2;
+  border-radius: 5px;
+  font-size: 2.5em;
+  font-weight: 300;
+  color: white;
+}
+
+.contact-phone a {
+  color: inherit;
+}
+.contact-address-header {
+  margin-bottom: 0;
+}
+.contact-address {
+  margin-left: 40px;
+  margin-top: 0;
 }

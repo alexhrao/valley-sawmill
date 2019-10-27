@@ -1,0 +1,72 @@
+.valley-navigator {
+    display: block;
+    position: sticky;
+    top: 0;
+    background-color: rgb(68, 68, 68);
+    box-shadow: black 0px 0px 5px;
+    z-index: 999;
+}
+
+.valley-navigator .nav-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    padding-right: 10px;
+}
+
+.mobile .valley-navigator .nav-container {
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.hamburger {
+    margin-top: 20px;
+}
+
+.valley-navigator img {
+    height: 65px;
+    margin-right: 10px;
+    border-bottom-right-radius: 5px;
+}
+
+.valley-navigator .nav-container a {
+    margin-left: 10px;
+}
+
+.mobile .valley-navigator .nav-container a {
+    margin-left: 0;
+}
+
+.hamburger-links {
+    margin-right: 10px;
+    padding: 0;
+    width: 100%;
+}
+
+.link-holder {
+    display: flex;
+    flex-direction: row;
+}
+
+.mobile .link-holder {
+    display: none;
+    flex-direction: column;
+}
+
+.mobile .link-holder.expanded {
+    display: flex;
+}
+
+.link-holder a {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 1.5em;
+    color: white;
+    text-decoration: none;
+}

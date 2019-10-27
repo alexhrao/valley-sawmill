@@ -6,7 +6,10 @@ const ProductCategory = (props) => {
     const { category, description, products } = props;
     return (
         <div className="product-category">
-            <h2>{category}</h2>
+            <div className="anchor">
+                <a id={category.id} href={`#${category.id}`}>&nbsp;</a>
+                <h2>{category.name}</h2>
+            </div>
             <p className="subtitle"><em>{description}</em></p>
             <div className="products">
                 {products.map(p => <Product key={p.imgLink} {...p} />)}
