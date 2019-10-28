@@ -1,36 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Navigator from './Navigator';
 import ProductCategory from './ProductCategory';
 import isMobile from './isMobile';
 
 const products = [
-  {
-    name: "Lumber",
-    id: "lumber",
-    description: "Valley Sawmill uses rough cut wood to produce a variety of size options as well as to fulfill customer requests. Our lumber stock varies in availability and price. Please call the Anchorage office if you have questions about our inventory.",
-    products: [
-      {
-        imgLink: "lumber/01.jpg",
-      },
-      {
-        imgLink: "lumber/02.jpg",
-      },
-      {
-        imgLink: "lumber/03.jpg",
-      },
-      {
-        imgLink: "lumber/04.jpg",
-      },
-      {
-        imgLink: "lumber/05.jpg",
-      },
-      {
-        imgLink: "lumber/06.jpg",
-      },
-    ]
-  },
   {
     name: "Woodchips",
     id: "woodchips",
@@ -124,6 +98,31 @@ const products = [
       }
     ]
   },
+  {
+    name: "Lumber",
+    id: "lumber",
+    description: "Valley Sawmill uses rough cut wood to produce a variety of size options as well as to fulfill customer requests. Our lumber stock varies in availability and price. Please call the Anchorage office if you have questions about our inventory.",
+    products: [
+      {
+        imgLink: "lumber/01.jpg",
+      },
+      {
+        imgLink: "lumber/02.jpg",
+      },
+      {
+        imgLink: "lumber/03.jpg",
+      },
+      {
+        imgLink: "lumber/04.jpg",
+      },
+      {
+        imgLink: "lumber/05.jpg",
+      },
+      {
+        imgLink: "lumber/06.jpg",
+      },
+    ]
+  },
 ];
 
 const about = {
@@ -151,30 +150,29 @@ const about = {
 
 function App() {
   const cats = products.map(c => {
-    return <ProductCategory key={c.name} category={{name: c.name, id: c.id}} description={c.description} products={c.products} />
+    return <ProductCategory key={c.name} category={c} products={c.products} />
   });
   return (
-    <div className={`App ${isMobile() ? 'mobile' : ''}`}>
+    <div className={`app ${isMobile() ? 'mobile' : ''}`}>
       <Navigator />
-      <div className='main-view'>
-        <div className="categories">
-          {cats}
-        </div>
-        <div className="contact">
-          <div className="anchor">
-            <a id="contact" href="#contact">&nbsp;</a>
-            <h2>Contact Us</h2>
-          </div>
-          <p>Have questions? Want a quote? Let's get in touch!</p>
-          <div className="contact-options">
-            <p className="contact-phone"><strong>Phone:</strong> <a href="tel:+19075633436">+1 (907) 563-3436</a></p>
-            <p className="contact-address-header"><strong>Address:</strong></p>
-            <p className="contact-address">Valley Sawmill<br />10600 Cordova Street<br />Anchorage, AK 99515<br />United States of America</p>
-          </div>
-
-        </div>
-        <ProductCategory key={about.name} category={{name: about.name, id: about.id}} description={about.description} products={about.products} />
+      <div className="categories">
+        {cats}
       </div>
+      <div className="contact">
+        <div className="anchor">
+          <a id="contact" href="#contact">&nbsp;</a>
+          <h2>Contact Us</h2>
+        </div>
+        <div className="contact-options">
+          <p>Have questions? Want a quote? Let's get in touch!</p>
+          <p className="contact-email"><strong>Email:</strong> <a href="mailto:valleysawmill@yahoo.com">valleysawmill@yahoo.com</a></p>
+          <p className="contact-phone"><strong>Phone:</strong> <a href="tel:+19075633436">+1 (907) 563-3436</a></p>
+          <p className="contact-address-header"><strong>Address:</strong></p>
+          <p className="contact-address">Valley Sawmill<br />19155 Rexbell Road<br />Wasilla, AK 99587<br />United States of America</p>
+        </div>
+
+      </div>
+      <ProductCategory key={about.name} category={{name: about.name, id: about.id}} description={about.description} products={about.products} />
     </div>
   );
 }

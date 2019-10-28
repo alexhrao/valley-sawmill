@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 import './Navigator.css';
 import isMobile from './isMobile';
 
@@ -28,7 +30,7 @@ export default class Navigator extends React.Component {
                     this.setState({isExpanded: !isExpanded});
                 }}
             >
-                Hi
+                <FontAwesomeIcon icon={faBars} />
             </button>
         );
         return (

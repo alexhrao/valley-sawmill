@@ -2,8 +2,8 @@
     display: block;
     position: sticky;
     top: 0;
-    background-color: rgb(68, 68, 68);
-    box-shadow: black 0px 0px 5px;
+    background-color: #413b18;
+    box-shadow: black 0px 0px 10px;
     z-index: 999;
 }
 
@@ -21,7 +21,12 @@
 }
 
 .hamburger {
-    margin-top: 20px;
+    font-size: 3em;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    outline: none;
 }
 
 .valley-navigator img {

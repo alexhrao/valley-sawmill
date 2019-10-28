@@ -1,31 +1,9 @@
-.main-view {
-  background-color: #000000;
-  color: white;
-  /* border: 8px solid #d38b47; */
-  border-right: none;
-}
-
-.mobile .main-view {
-  flex-direction: column;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap');
+html,
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #D1ED9E;
+  color: black;
 }
 
 .anchor {
@@ -35,12 +13,12 @@
 .anchor a {
   position: absolute;
   left: 0;
-  top: -65px;
+  top: -120px;
   visibility: hidden;
 }
 
 .mobile .anchor a {
-  top: -315px;
+  top: -340px;
 }
 
 .contact h2 {
@@ -61,6 +39,10 @@
   color: white;
 }
 
+.contact-options {
+  margin-left: 40px;
+}
+
 .contact-phone a {
   color: inherit;
 }
@@ -70,4 +52,8 @@
 .contact-address {
   margin-left: 40px;
   margin-top: 0;
+}
+
+.app > .product-category:last-child > .products {
+  justify-content: space-around;
 }
