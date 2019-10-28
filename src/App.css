@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap');
+@import "~react-image-gallery/styles/css/image-gallery.css";
 html,
 body {
   font-family: 'Open Sans', sans-serif;
@@ -56,4 +57,16 @@ body {
 
 .app > .product-category:last-child > .products {
   justify-content: space-around;
+}
+
+.gallery {
+  max-width: 67vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.mobile .gallery {
+  max-width: 100%;
 }

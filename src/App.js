@@ -1,4 +1,5 @@
 import React from 'react';
+import ImageGallery from 'react-image-gallery';
 import './App.css';
 import Navigator from './Navigator';
 import ProductCategory from './ProductCategory';
@@ -95,7 +96,10 @@ const products = [
       },
       {
         imgLink: "logs/18.jpg",
-      }
+      },
+      {
+        imgLink: "logs/19.jpg",
+      },
     ]
   },
   {
@@ -123,12 +127,34 @@ const products = [
       },
     ]
   },
+  {
+    name: "Equipment",
+    id: "equipment",
+    description: "We are currently looking at leasing a Morbark 4600 track Horizontal Wood Grinder",
+    products: [
+      {
+        name: "",
+        description: "",
+        imgLink: "equipment/01.jpg",
+      },
+      {
+        name: "",
+        description: "",
+        imgLink: "equipment/02.jpg",
+      },
+      {
+        name: "",
+        description: "",
+        imgLink: "equipment/03.jpg",
+      },
+    ]
+  },
 ];
 
 const about = {
   name: "About the Company",
   id: "about",
-  description: "Valley Sawmill has been Alaskan owned and operated since 1979. We currently have two locations; one in Anchorage and one at Pt. MacKenzie. We are dedicated to providing quality materials to all our customers, no matter the size.",
+  description: "Serving Alaskans for over 40 Years!",
   products: [
     {
       name: "Gregory Bell",
@@ -149,12 +175,35 @@ const about = {
 };
 
 function App() {
-  const cats = products.map(c => {
+  const cats = [...products, about].map(c => {
     return <ProductCategory key={c.name} category={c} products={c.products} />
   });
   return (
     <div className={`app ${isMobile() ? 'mobile' : ''}`}>
       <Navigator />
+      <div className="gallery">
+        <ImageGallery
+          showThumbnails={false}
+          showBullets={true}
+          autoPlay={true}
+          items={[
+          {
+            original: "slideshow/01.jpg"
+          },
+          {
+            original: "slideshow/02.jpg"
+          },
+          {
+            original: "slideshow/03.jpg"
+          },
+          {
+            original: "slideshow/04.jpg"
+          },
+          {
+            original: "slideshow/05.jpg"
+          },
+        ]} />
+      </div>
       <div className="categories">
         {cats}
       </div>
@@ -170,9 +219,7 @@ function App() {
           <p className="contact-address-header"><strong>Address:</strong></p>
           <p className="contact-address">Valley Sawmill<br />19155 Rexbell Road<br />Wasilla, AK 99587<br />United States of America</p>
         </div>
-
       </div>
-      <ProductCategory key={about.name} category={{name: about.name, id: about.id}} description={about.description} products={about.products} />
     </div>
   );
 }
