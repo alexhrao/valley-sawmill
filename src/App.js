@@ -157,7 +157,7 @@ const about = {
   description: "Serving Alaskans for over 40 Years!",
   products: [
     {
-      name: "Gregory Bell",
+      name: "Greg Bell",
       description: "President",
       imgLink: "about/greg.jpg",
     },
@@ -217,7 +217,7 @@ function App() {
           <p className="contact-email"><strong>Email:</strong> <a href="mailto:valleysawmill@yahoo.com">valleysawmill@yahoo.com</a></p>
           <p className="contact-phone"><strong>Phone:</strong> <a href="tel:+19075633436">+1 (907) 563-3436</a></p>
           <p className="contact-address-header"><strong>Address:</strong></p>
-          <p className="contact-address">Valley Sawmill<br />19155 Rexbell Road<br />Wasilla, AK 99587<br />United States of America</p>
+          <p className="contact-address">Valley Sawmill<br />19155 Rex Bell Road<br />Wasilla, AK 99587<br />United States of America</p>
         </div>
       </div>
     </div>
